@@ -80,3 +80,34 @@ function isDivisible(n, x, y) {
 function sum(numbers) {
     return numbers.reduce((el, curr) => el = el + curr)
 };
+
+//Задача про массив уникальных элементов
+//решение 1
+let a = [8, "2", "b", 7, "2", 5, 3, 8, 6];
+let b = []
+
+function getUnique(a) {
+    a.forEach(el => {
+        if (!b.includes(el)) {
+            b.push(el)
+        }
+    })
+    //return b;
+    console.log(a, b)
+}
+
+getUnique(a)
+
+//Решение 2
+
+let a = [8, "2", "b", 7, "2", 5, 3, 8, 6];
+let b = []
+
+function getUnique(a) {
+
+    b = Array.from(new Set(a))
+    //return b;
+    console.log(a, b)
+}
+
+getUnique(a)
